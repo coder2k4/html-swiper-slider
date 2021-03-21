@@ -1,0 +1,64 @@
+.home-aside {
+  color: white;
+  position: absolute;
+  padding-top: $size;
+  top: 0;
+  z-index: 5;
+  border-right: 1px solid rgba(#fff, $border-opacity);
+  background-color: $dark;
+  width: $size;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.home-aside__decoration {
+  flex-grow: 1;
+  background: url("../images/dist/decoration.svg") center no-repeat;
+  width: 100%;
+}
+.home-aside__soc {
+  flex-grow: 1;
+}
+
+.home-aside__share-icon {
+  flex-basis: $size;
+  width: $size;
+  background: $accent url("../images/dist/share-solid.svg") no-repeat center;
+  background-size: 12px;
+}
+
+.home-aside__soc-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.soc-item {
+  display: block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(#fff, $border-opacity);
+  transition: .3s;
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
+  &:hover {
+    background-color: $accent;
+    img {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 14px;
+    height: auto;
+    max-height: 15px;
+    opacity: .3;
+  }
+}

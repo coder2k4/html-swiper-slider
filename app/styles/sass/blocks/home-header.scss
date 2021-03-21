@@ -1,0 +1,132 @@
+body, html {
+  height: 100%;
+}
+
+.home-header {
+  background-color: $deep;
+  height: 100%;
+  padding-top: $size;
+}
+
+.top-line {
+  display: flex;
+  align-items: center;
+  height: $size;
+  background-color: $deep;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid rgba(#fff, $border-opacity);
+}
+
+.top-line__decoration {
+  flex-grow: 1;
+  text-align: center;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 50px;
+    background-color: #fff;
+    top: -4px;
+    position: relative;
+    opacity: $border-opacity;
+  }
+}
+
+.logo, .menu-button-container {
+  flex-basis: 200px;
+}
+
+.logo {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  &:hover, &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.logo__text{
+
+}
+
+.logo__img-wrapper {
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button-container {
+  flex-basis: 200px;
+  text-align: right;
+  position: relative;
+  height: $size;
+  
+}
+
+.menu-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: $size;
+  height: $size;
+  background-image: url('../images/dist/bars-solid.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #3C3C3C;
+  transition: background .25s ease-out;
+  &:hover {
+    background-color: $accent;
+  }
+}
+
+.top-line__contacts {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .4em;
+  color: rgba(#fff,.5);
+  display: flex;
+  align-items: center;
+}
+
+.top-line__numbers,.top-line__text {
+  font-family: roboto-cc, sans-serif;
+  margin-left: 7px;
+  a {
+    color: $accent;
+  }
+}
+
+.top-line__numbers{
+  color: $accent;
+}
+
+.top-line__separator {
+  height: 30px;
+  width: 1px;
+  background-color: #fff;
+  opacity: $border-opacity;
+  display: inline-block;
+  margin: 0 20px;
+}
+.top-line_address {
+
+}
+.top-line__text {
+  color: rgba(#fff, .75);
+}
+
+.home-header__content {
+  height: 100%;
+}
