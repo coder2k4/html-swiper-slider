@@ -1,13 +1,17 @@
-// // Import jQuery module (npm i jquery)
-// import $ from 'jquery'
-// window.jQuery = $
-// window.$ = $
+import {Swiper , Parallax, Mousewheel} from "swiper";
 
-// // Import vendor jQuery plugin example (not module)
-// require('~/app/libs/mmenu/dist/mmenu.js')
+Swiper.use([Parallax, Mousewheel])
 
 document.addEventListener('DOMContentLoaded', () => {
 
 	// Custom JS
+    const swiper = new Swiper('.slider-img' , {
+        loop: false,
+        speed: 2400,
+        parallax: true,
+        mousewheel: {
+            invert: false
+        }
+    })
 
 })

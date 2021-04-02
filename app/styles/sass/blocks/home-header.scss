@@ -1,4 +1,4 @@
-body, html {
+ body, html {
   height: 100%;
 }
 
@@ -129,4 +129,33 @@ body, html {
 
 .home-header__content {
   height: 100%;
+}
+
+
+// Настройка стилей Swiper slide
+
+.slider-img {
+  height: 100%;
+  width: 75%;
+  position: relative;
+}
+
+.slider-img__slide {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000,.45);
+    z-index: 2;
+  }
+}
+.slider-img__bg {
+  width: 100%;
+  height: 100%;
+  //background-position: center center;
+  background-size: cover;
 }
