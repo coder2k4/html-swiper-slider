@@ -1,4 +1,4 @@
- body, html {
+body, html {
   height: 100%;
 }
 
@@ -24,6 +24,7 @@
 .top-line__decoration {
   flex-grow: 1;
   text-align: center;
+
   &:before {
     content: '';
     display: inline-block;
@@ -48,13 +49,14 @@
   font-size: 13px;
   letter-spacing: 0.5rem;
   font-weight: 500;
+
   &:hover, &:focus {
     color: #fff;
     text-decoration: none;
   }
 }
 
-.logo__text{
+.logo__text {
 
 }
 
@@ -71,10 +73,10 @@
   text-align: right;
   position: relative;
   height: $size;
-  
+
 }
 
-.menu-button{
+.menu-button {
   position: absolute;
   top: 0;
   right: 0;
@@ -85,6 +87,7 @@
   background-position: center;
   background-color: #3C3C3C;
   transition: background .25s ease-out;
+
   &:hover {
     background-color: $accent;
   }
@@ -95,20 +98,21 @@
   font-size: 10px;
   font-weight: 500;
   letter-spacing: .4em;
-  color: rgba(#fff,.5);
+  color: rgba(#fff, .5);
   display: flex;
   align-items: center;
 }
 
-.top-line__numbers,.top-line__text {
+.top-line__numbers, .top-line__text {
   font-family: roboto-cc, sans-serif;
   margin-left: 7px;
+
   a {
     color: $accent;
   }
 }
 
-.top-line__numbers{
+.top-line__numbers {
   color: $accent;
 }
 
@@ -120,9 +124,11 @@
   display: inline-block;
   margin: 0 20px;
 }
+
 .top-line_address {
 
 }
+
 .top-line__text {
   color: rgba(#fff, .75);
 }
@@ -137,25 +143,72 @@
 .slider-img {
   height: 100%;
   width: 75%;
+  top: 0;
+  left: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .slider-img__slide {
   height: 100%;
+  width: 100%;
   overflow: hidden;
   position: relative;
+
   &:before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(#000,.45);
+    background-color: rgba(#000, .45);
     z-index: 2;
   }
 }
+
 .slider-img__bg {
   width: 100%;
   height: 100%;
   //background-position: center center;
   background-size: cover;
+  position: relative;
+}
+
+
+// Стили текстового слайдера
+.slider-text {
+  position: absolute;
+  height: calc(100% - #{$size});
+  width: 100%;
+  z-index: 2;
+}
+
+.slider-text__slide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.slider-text__content {
+  margin-right: 22%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.slider-text__title {
+  font-size: 60px;
+  line-height: 120%;
+  max-width: 700px;
+  font-family: oswald-cc, sans-serif;
+  span {
+    color: $accent;
+    white-space: nowrap;
+  }
+}
+
+.slider-text__description {
+  margin: 50px 0;
+  max-width: 500px;
+  font-size: 13px;
+  font-weight: 600;
 }

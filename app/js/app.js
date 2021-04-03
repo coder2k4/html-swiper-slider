@@ -1,17 +1,27 @@
-import {Swiper , Parallax, Mousewheel} from "swiper";
+import {Swiper , Parallax, Mousewheel, Controller} from "swiper";
 
-Swiper.use([Parallax, Mousewheel])
+Swiper.use([Parallax, Mousewheel, Controller])
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	// Custom JS
-    const swiper = new Swiper('.slider-img' , {
+
+    // Swiper Text
+    const swiperText = new Swiper('.slider-text' , {
         loop: false,
         speed: 2400,
-        parallax: true,
         mousewheel: {
             invert: false
         }
     })
+
+	// Swiper IMG
+    const swiperImg = new Swiper('.slider-img' , {
+        loop: false,
+        speed: 2400,
+        parallax: true,
+    })
+
+    swiperImg.controller.control = swiperText;
+    swiperText.controller.control = swiperImg;
 
 })
