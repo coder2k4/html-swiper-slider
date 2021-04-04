@@ -200,6 +200,7 @@ body, html {
   line-height: 120%;
   max-width: 700px;
   font-family: oswald-cc, sans-serif;
+
   span {
     color: $accent;
     white-space: nowrap;
@@ -211,4 +212,132 @@ body, html {
   max-width: 500px;
   font-size: 13px;
   font-weight: 600;
+}
+
+
+// Стили для пагинации
+.slider-pagination {
+  flex-basis: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $size;
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin: 0 7.5px;
+    background-color: #fff;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    position: relative;
+    background-color: $accent;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 1px solid $accent;
+      border-radius: 50%;
+      top: -4px;
+      left: -4px;
+    }
+  }
+}
+
+// Стили для скроллбара
+.slider-scrollbar {
+  flex-grow: 1;
+
+  .swiper-scrollbar {
+    height: 1px;
+    background-color: rgba(#fff, .2);
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: $accent;
+    height: 3px;
+    cursor: pointer;
+    top: -1px;
+  }
+}
+
+
+//  Стили для навигации
+.slider-navigation {
+  flex-basis: 140px;
+  position: relative;
+  .slider-navigation__container {
+    width: 90px;
+    position: relative;
+    margin: auto;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    color: $accent;
+    background-color: #3c3c3c;
+    border-radius: 50%;
+    border: 2px solid $accent;
+    top: 7px;
+    &:after {
+      font-size: 10px;
+    }
+    &.swiper-button-disabled {
+      opacity: 1;
+      color: #8a8a8a;
+      border-color: #8a8a8a;
+    }
+  }
+}
+
+// Изображение гайки
+.slider-gear {
+  width: 470px;
+  height: 470px;
+  position: absolute;
+  background-image: url("../images/dist/gear.svg");
+  background-size: cover;
+  background-position: center;
+  top: 50%;
+  margin-top: -270px;
+  z-index: 9;
+  right: calc(23.5% - 235px);
+}
+
+
+.slider-pagination-count {
+  position: absolute;
+  right: 15px;
+  top: 35px;
+  width: 120px;
+  z-index: 100;
+  font-family: oswald-cc, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  .current {
+    font-size: 40px;
+    color: $accent;
+    display: inline-block;
+    min-width: 42px;
+  }
+}
+
+.slider-pagination-current {
+  right: 40px;
+  bottom: 10px;
+  position: absolute;
+  font-size: 100px;
+  font-family: oswald-cc, sans-serif;
+  color: $deep;
+  -webkit-text-stroke: 1px #7f7f7f;
+
+}
+
+.slider-pagination-dot {
+  color: $accent;
+  -webkit-text-stroke: 0 transparent;
 }
